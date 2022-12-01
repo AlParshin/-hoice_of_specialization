@@ -55,3 +55,11 @@ void PrintArray(string[] newArray)
     }
     Console.Write("]");
 }
+
+// Тело основной программы
+Console.WriteLine("Введите размер массива:");
+int size = Convert.ToInt32(Console.ReadLine());
+string[] array = new string[size];
+array = FillArray(array);
+string[] newArray = LessThanThree(array);
+PrintArray(newArray);
