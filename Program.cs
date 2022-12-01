@@ -36,3 +36,22 @@ string[] LessThanThree(string[] array)
     }
     return newArray;
 }
+
+// Метод для распечатки нового массива
+void PrintArray(string[] newArray)
+{
+    Console.WriteLine("А теперь распечатаем наш полученный массив строк:");
+    Console.Write("[");
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        if (i == 0)
+        {
+            Console.Write(newArray[i]);
+        }
+        else
+        {
+            Console.Write($", {newArray[i]}");
+        }
+    }
+    Console.Write("]");
+}
