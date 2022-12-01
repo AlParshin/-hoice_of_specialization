@@ -16,3 +16,23 @@ string[] FillArray(string[] array)
     return array;
 }
 
+// Метод для поиска элементов длиной меньше 3 симоволов и для добавления их в новый массив
+string[] LessThanThree(string[] array)
+{
+    int newSize = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3) newSize++;
+    }
+    string[] newArray = new string[newSize];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+    }
+    return newArray;
+}
